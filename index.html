@@ -15,17 +15,17 @@
       
   <ul class="quotes">
       <!-- Loop through quotes -->
-      <% for(var i = 0; i < quotes.length; i++) {%>
+      for(var i = 0; i < quotes.length; i++) {
         <li class="quote">
           <!-- Output name from the iterated quote object -->
-          <span><%= quotes[i].name %></span>:
+          <span>quotes[i].name</span>:
           <!-- Output quote from the iterated quote object -->
           <br>
-          <img src='<%= quotes[i].img  %>' width="150px"  height="150px">
+          <img src= quotes[i].img   width="150px"  height="150px">
           <br>
-          <span><%= quotes[i].summary %></span>
+          <span>quotes[i].summary</span>
         </li>
-      <% } %>
+     
     </ul>
 </body> 
 
