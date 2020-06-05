@@ -42,6 +42,13 @@ MongoClient.connect('mongodb://localhost:27017/', (err, client) => {
             })
             .catch(/* ... */);
     });
+        app.get('/', (req, res) => {
+    db.collection('newtest').find().toArray()
+            .then(results => {
+                res.render(__dirname + '\\locals\\index.html', { quotes: results });
+            })
+            .catch(/* ... */);
+    });
 
 });
         
